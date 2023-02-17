@@ -7,14 +7,15 @@ class InputIcon extends StatefulWidget {
   final String? placeholder;
   final EdgeInsets? padding;
   final TextStyle? hintStyle;
-  const InputIcon(
-      {super.key,
-      this.endIcon = false,
-      this.icon,
-      this.textController,
-      this.placeholder = "Enter Mobile Number",
-      this.padding,
-      this.hintStyle});
+  const InputIcon({
+    super.key,
+    this.endIcon = false,
+    this.icon,
+    this.textController,
+    this.placeholder = "Enter Mobile Number",
+    this.padding,
+    this.hintStyle,
+  });
 
   @override
   State<InputIcon> createState() => _InputIconState();

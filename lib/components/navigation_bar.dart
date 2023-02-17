@@ -59,7 +59,7 @@ class _CustomNavigationState extends State<CustomNavigation> {
               });
             },
             child: Container(
-              width: 80,
+              width: MediaQuery.of(context).size.width / _screens.length,
               color: Colors.transparent,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -91,6 +91,7 @@ class _CustomNavigationState extends State<CustomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       body: _screens[_index]["screen"],
       bottomNavigationBar: _buildBottomBar(context),
     );

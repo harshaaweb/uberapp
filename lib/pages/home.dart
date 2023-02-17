@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uberapp/components/Icon_box.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -42,110 +43,101 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
 
             // two menu with icons
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.45,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: const [
-                      Icon(Icons.car_rental),
-                      SizedBox(height: 5),
-                      Text("Ride"),
-                    ],
-                  ),
+                IconBox1(
+                  boxWidth: MediaQuery.of(context).size.width / 2.15,
+                  boxHeight: 80,
+                  haveShadow: false,
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(
+                      Icons.car_rental,
+                      size: 30,
+                    ),
+                    Text("Ride"),
+                    SizedBox(height: 5),
+                  ],
                 ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.02,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.45,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: const [
-                      Icon(Icons.delivery_dining_outlined),
-                      SizedBox(height: 5),
-                      Text("Delivery"),
-                    ],
-                  ),
+                IconBox1(
+                  boxWidth: MediaQuery.of(context).size.width / 2.15,
+                  boxHeight: 80,
+                  haveShadow: false,
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(
+                      Icons.car_rental,
+                      size: 30,
+                    ),
+                    Text("Ride"),
+                    SizedBox(height: 5),
+                  ],
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: const [
-                      Icon(Icons.car_rental),
-                      SizedBox(height: 5),
-                      Text("Ride"),
-                    ],
-                  ),
+                IconBox1(
+                  boxWidth: MediaQuery.of(context).size.width / 4.5,
+                  boxHeight: 80,
+                  haveShadow: false,
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(
+                      Icons.car_rental,
+                      size: 30,
+                    ),
+                    Text("Ride"),
+                    SizedBox(height: 5),
+                  ],
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: const [
-                      Icon(Icons.delivery_dining_outlined),
-                      SizedBox(height: 5),
-                      Text("Delivery"),
-                    ],
-                  ),
+                IconBox1(
+                  boxWidth: MediaQuery.of(context).size.width / 4.5,
+                  boxHeight: 80,
+                  haveShadow: false,
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(
+                      Icons.delivery_dining_outlined,
+                      size: 30,
+                    ),
+                    Text("Delivery"),
+                    SizedBox(height: 5),
+                  ],
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: const [
-                      Icon(Icons.privacy_tip_outlined),
-                      SizedBox(height: 5),
-                      Text("Private"),
-                    ],
-                  ),
+                IconBox1(
+                  boxWidth: MediaQuery.of(context).size.width / 4.5,
+                  boxHeight: 80,
+                  haveShadow: false,
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(
+                      Icons.privacy_tip_outlined,
+                      size: 30,
+                    ),
+                    Text("Private"),
+                    SizedBox(height: 5),
+                  ],
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: const [
-                      Icon(Icons.watch_later_outlined),
-                      SizedBox(height: 5),
-                      Text("Hourly"),
-                    ],
-                  ),
+                IconBox1(
+                  boxWidth: MediaQuery.of(context).size.width / 4.5,
+                  boxHeight: 80,
+                  haveShadow: false,
+                  children: const [
+                    SizedBox(height: 5),
+                    Icon(
+                      Icons.watch_later_outlined,
+                      size: 30,
+                    ),
+                    Text("Hourly"),
+                    SizedBox(height: 5),
+                  ],
                 ),
               ],
             ),
@@ -155,160 +147,168 @@ class _HomeState extends State<Home> {
               width: MediaQuery.of(context).size.width,
               child: PageView(
                 children: [
-                  Container(
-                    height: 200,
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    padding: const EdgeInsets.all(10),
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.blue.shade600,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 10),
-                        const Text(
-                          "Want to go somewhere?",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        const SizedBox(height: 10),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          child: const Text(
-                            "We have a wide range of cars for you to choose from",
+                  Card(
+                    child: Container(
+                      height: 200,
+                      padding: const EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade600,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 10),
+                          const Text(
+                            "Want to go somewhere?",
                             style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
+                                color: Colors.white,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.6,
+                            child: const Text(
+                              "We have a wide range of cars for you to choose from",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                        const Spacer(),
-                        Row(children: const [
-                          Text(
-                            "Book a ride now",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
+                          const Spacer(),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, "/search");
+                            },
+                            child: Row(children: const [
+                              Text(
+                                "Book a ride now",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              Icon(
+                                Icons.arrow_forward,
+                                size: 25,
+                                color: Colors.white,
+                              ),
+                            ]),
                           ),
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.arrow_forward,
-                            size: 25,
-                            color: Colors.white,
-                          ),
-                        ]),
-                        const SizedBox(height: 10),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 200,
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    padding: const EdgeInsets.all(10),
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.purple.shade600,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 10),
-                        const Text(
-                          "Want to go somewhere?",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        const SizedBox(height: 10),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          child: const Text(
-                            "We have a wide range of cars for you to choose from",
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                        const Spacer(),
-                        Row(children: const [
-                          Text(
-                            "Book a ride now",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.arrow_forward,
-                            size: 25,
-                            color: Colors.white,
-                          ),
-                        ]),
-                        const SizedBox(height: 10),
-                      ],
+                          const SizedBox(height: 10),
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    height: 200,
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    padding: const EdgeInsets.all(10),
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: Colors.green.shade600,
-                      borderRadius: BorderRadius.circular(15),
+                  Card(
+                    child: Container(
+                      height: 200,
+                      padding: const EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        color: Colors.purple.shade600,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 10),
+                          const Text(
+                            "Want to go somewhere?",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.6,
+                            child: const Text(
+                              "We have a wide range of cars for you to choose from",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          Row(children: const [
+                            Text(
+                              "Book a ride now",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Icon(
+                              Icons.arrow_forward,
+                              size: 25,
+                              color: Colors.white,
+                            ),
+                          ]),
+                          const SizedBox(height: 10),
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 10),
-                        const Text(
-                          "Want to go somewhere?",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        const SizedBox(height: 10),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          child: const Text(
-                            "We have a wide range of cars for you to choose from",
+                  ),
+                  Card(
+                    child: Container(
+                      height: 200,
+                      padding: const EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        color: Colors.green.shade600,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 10),
+                          const Text(
+                            "Want to go somewhere?",
                             style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
+                                color: Colors.white,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          const SizedBox(height: 10),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.6,
+                            child: const Text(
+                              "We have a wide range of cars for you to choose from",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                        const Spacer(),
-                        Row(children: const [
-                          Text(
-                            "Book a ride now",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
+                          const Spacer(),
+                          Row(children: const [
+                            Text(
+                              "Book a ride now",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Icon(
+                              Icons.arrow_forward,
+                              size: 25,
                               color: Colors.white,
                             ),
-                          ),
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.arrow_forward,
-                            size: 25,
-                            color: Colors.white,
-                          ),
-                        ]),
-                        const SizedBox(height: 10),
-                      ],
+                          ]),
+                          const SizedBox(height: 10),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -316,7 +316,7 @@ class _HomeState extends State<Home> {
             ),
 
             // map image
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -327,7 +327,7 @@ class _HomeState extends State<Home> {
                     image: AssetImage("assets/images/map.png"),
                     fit: BoxFit.cover,
                   ),
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(5),
                 ),
               ),
             ),
