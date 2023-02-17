@@ -122,7 +122,7 @@ class _ServicesState extends State<Services> {
             ),
 
             const SizedBox(
-              height: 10,
+              height: 14,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,7 +140,7 @@ class _ServicesState extends State<Services> {
                     const Text(
                       "Hourly",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   ],
@@ -158,7 +158,7 @@ class _ServicesState extends State<Services> {
                     const Text(
                       "2-Wheel",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   ],
@@ -176,7 +176,7 @@ class _ServicesState extends State<Services> {
                     const Text(
                       "Explore",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   ],
@@ -194,35 +194,11 @@ class _ServicesState extends State<Services> {
                     const Text(
                       "Food",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   ],
                 ),
-                // TextIconBox(
-                //   text: "2-Wheel",
-                //   centerIcon: SvgPicture.asset(
-                //     "assets/svg/two_wheel.svg",
-                //     width: 40,
-                //     height: 40,
-                //   ),
-                // ),
-                // TextIconBox(
-                //   text: "Explore",
-                //   centerIcon: SvgPicture.asset(
-                //     "assets/svg/explore.svg",
-                //     width: 40,
-                //     height: 40,
-                //   ),
-                // ),
-                // TextIconBox(
-                //   text: "Food",
-                //   centerIcon: SvgPicture.asset(
-                //     "assets/svg/food.svg",
-                //     width: 40,
-                //     height: 40,
-                //   ),
-                // ),
               ],
             ),
             const SizedBox(
@@ -246,24 +222,17 @@ class _ServicesState extends State<Services> {
               height: 300,
               child: ListView.separated(
                   separatorBuilder: (context, index) => const SizedBox(
-                        width: 20,
+                        width: 12,
                       ),
                   itemCount: data.length,
                   physics: const BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     Map item = data[index];
-                    return Container(
-                      padding: const EdgeInsets.only(right: 12, left: 12),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: BlogCard(
-                        title: item["title"],
-                        subtitle: item["subtitle"],
-                        image: item["image"],
-                      ),
+                    return BlogCard(
+                      title: item["title"],
+                      subtitle: item["subtitle"],
+                      image: item["image"],
                     );
                   }),
             ),
