@@ -12,7 +12,7 @@ class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         children: [
           Row(
@@ -71,8 +71,9 @@ class _AccountState extends State<Account> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconBox1(
-                boxHeight: MediaQuery.of(context).size.width / 3.5,
-                boxWidth: MediaQuery.of(context).size.width / 3.5,
+                boxHeight: MediaQuery.of(context).size.width / 3.3,
+                boxWidth: MediaQuery.of(context).size.width / 3.3,
+                haveShadow: false,
                 children: const [
                   Icon(
                     Icons.help_outline,
@@ -88,8 +89,9 @@ class _AccountState extends State<Account> {
                 ],
               ),
               IconBox1(
-                boxHeight: MediaQuery.of(context).size.width / 3.5,
-                boxWidth: MediaQuery.of(context).size.width / 3.5,
+                boxHeight: MediaQuery.of(context).size.width / 3.3,
+                boxWidth: MediaQuery.of(context).size.width / 3.3,
+                haveShadow: false,
                 children: const [
                   Icon(
                     Icons.wallet_outlined,
@@ -105,8 +107,9 @@ class _AccountState extends State<Account> {
                 ],
               ),
               IconBox1(
-                boxHeight: MediaQuery.of(context).size.width / 3.5,
-                boxWidth: MediaQuery.of(context).size.width / 3.5,
+                boxHeight: MediaQuery.of(context).size.width / 3.3,
+                boxWidth: MediaQuery.of(context).size.width / 3.3,
+                haveShadow: false,
                 children: const [
                   Icon(
                     Icons.timer_outlined,
@@ -127,32 +130,34 @@ class _AccountState extends State<Account> {
             height: 20,
           ),
           Expanded(
-            child: Container(
-              decoration: const BoxDecoration(color: Colors.white),
-              child: ListView(
-                children: const [
-                  ListTile(
-                    leading: Icon(Icons.message_outlined),
-                    title: Text("Message"),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.payment_outlined),
-                    title: Text("Promotions"),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.favorite_outline),
-                    title: Text("Favorite"),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text("Settings"),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.help_outline),
-                    title: Text("Legal"),
-                  ),
-                ],
-              ),
+            child: ListView(
+              children: const [
+                ListTile(
+                  tileColor: Colors.white,
+                  leading: Icon(Icons.message_outlined),
+                  title: Text("Message"),
+                ),
+                ListTile(
+                  tileColor: Colors.white,
+                  leading: Icon(Icons.payment_outlined),
+                  title: Text("Promotions"),
+                ),
+                ListTile(
+                  tileColor: Colors.white,
+                  leading: Icon(Icons.favorite_outline),
+                  title: Text("Favorite"),
+                ),
+                ListTile(
+                  tileColor: Colors.white,
+                  leading: Icon(Icons.settings),
+                  title: Text("Settings"),
+                ),
+                ListTile(
+                  tileColor: Colors.white,
+                  leading: Icon(Icons.help_outline),
+                  title: Text("Legal"),
+                ),
+              ],
             ),
           )
         ],
