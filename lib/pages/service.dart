@@ -253,10 +253,17 @@ class _ServicesState extends State<Services> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     Map item = data[index];
-                    return BlogCard(
-                      title: item["title"],
-                      subtitle: item["subtitle"],
-                      image: item["image"],
+                    return Container(
+                      padding: const EdgeInsets.only(right: 12, left: 12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: BlogCard(
+                        title: item["title"],
+                        subtitle: item["subtitle"],
+                        image: item["image"],
+                      ),
                     );
                   }),
             ),
