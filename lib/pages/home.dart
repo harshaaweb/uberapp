@@ -237,22 +237,27 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           const Spacer(),
-                          Row(children: const [
-                            Text(
-                              "Book a ride now",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, "/premium");
+                            },
+                            child: Row(children: const [
+                              Text(
+                                "Check Premium Services",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              Icon(
+                                Icons.arrow_forward,
+                                size: 25,
                                 color: Colors.white,
                               ),
-                            ),
-                            SizedBox(width: 10),
-                            Icon(
-                              Icons.arrow_forward,
-                              size: 25,
-                              color: Colors.white,
-                            ),
-                          ]),
+                            ]),
+                          ),
                           const SizedBox(height: 10),
                         ],
                       ),
@@ -290,22 +295,27 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           const Spacer(),
-                          Row(children: const [
-                            Text(
-                              "Book a ride now",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, "/search");
+                            },
+                            child: Row(children: const [
+                              Text(
+                                "Book a ride now",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              Icon(
+                                Icons.arrow_forward,
+                                size: 25,
                                 color: Colors.white,
                               ),
-                            ),
-                            SizedBox(width: 10),
-                            Icon(
-                              Icons.arrow_forward,
-                              size: 25,
-                              color: Colors.white,
-                            ),
-                          ]),
+                            ]),
+                          ),
                           const SizedBox(height: 10),
                         ],
                       ),

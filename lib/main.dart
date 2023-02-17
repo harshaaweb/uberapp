@@ -6,6 +6,7 @@ import 'package:uberapp/pages/delivery.dart';
 import 'package:uberapp/pages/get_started.dart';
 import 'package:uberapp/pages/login.dart';
 import 'package:uberapp/pages/otp_verification.dart';
+import 'package:uberapp/pages/premium.dart';
 import 'package:uberapp/pages/search_page.dart';
 import 'package:uberapp/pages/user_name.dart';
 import 'package:uberapp/pages/terms_policy.dart';
@@ -37,10 +38,12 @@ class MyApp extends StatelessWidget {
         '/user_name': (context) => const UserName(),
         '/terms-policy': (context) => const TermsAndPolicy(),
         '/delivery': (context) => const Delivery(),
+        '/premium': (context) => const PremiumService(),
       },
     );
   }
 }
+
 class AppScrollBehavior extends MaterialScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
