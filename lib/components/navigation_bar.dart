@@ -91,7 +91,7 @@ class _CustomNavigationState extends State<CustomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Colors.grey.shade200,
       body: _screens[_index]["screen"],
       bottomNavigationBar: _buildBottomBar(context),
     );
